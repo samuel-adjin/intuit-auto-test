@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "auto shipit",
-    "auto":"auto"
+    "auto": "auto"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@auto-it/git-tag": "^11.0.4",
     "auto": "^11.0.4"
   }
 }
