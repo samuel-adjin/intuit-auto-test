@@ -32,4 +32,4 @@ jobs:
         run: |
           npm install --frozen-lockfile
           npm build
-          npm auto latest 
+          npx auto latest 
