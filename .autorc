@@ -2,6 +2,12 @@
   "plugins": [
     "git-tag"
   ],
+  "shipit": {
+    "prerelease": true,
+    "message": "string",
+    "noChangelog": true,
+    "onlyGraduateWithReleaseLabel": true
+  },
   "owner": "samuel-adjin",
   "repo": "intuit-auto-test",
   "name": "samuel-adjin",
