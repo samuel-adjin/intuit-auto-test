@@ -1,5 +1,4 @@
 name: Release
-
 # on: [push]
 on:
   workflow_dispatch:
@@ -30,7 +29,8 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
         run: |
           npm install --frozen-lockfile
           npm build
-          npx auto shipit
+          npx auto shipit 
