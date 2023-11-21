@@ -12,24 +12,17 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v4
         with:
-          node-version: 12.x
-
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: npm-deps-${{ hashFiles('npm.lock') }}
-          restore-keys: |
-            npm-deps-${{ hashFiles('npm.lock') }}
+          node-version: 16.x
+          cache: 'npm'
+          cache-dependency-path: subdir/package-lock.json
 
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # PR_NUMBER: ${{ github.event.number }}
         run: |
           npm install --frozen-lockfile
           npm build
-          npx auto latest 
+          npm run auto latest 
