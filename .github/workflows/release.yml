@@ -23,4 +23,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx auto latest 
+          npm install --frozen-lockfile
+          npm build
+          npx run auto latest 
