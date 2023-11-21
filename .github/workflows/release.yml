@@ -31,7 +31,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
         run: |
-          npm run auto create-labels
           npm install --frozen-lockfile
           npm build
           npx auto shipit 
