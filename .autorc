@@ -7,6 +7,9 @@
     "message": "string",
     "noChangelog": true
   },
+  "release": {
+    "prerelease": true
+  },
   "owner": "samuel-adjin",
   "repo": "intuit-auto-test",
   "name": "samuel-adjin",
